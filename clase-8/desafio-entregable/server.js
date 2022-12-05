@@ -1,4 +1,4 @@
-// importamos la dependencia express y multer
+// importamos la dependencia express
 const express= require("express");
 let {productos } = require("./claseApiRest")
 
