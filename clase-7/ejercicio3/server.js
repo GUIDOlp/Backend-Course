@@ -17,7 +17,7 @@ app.use(express.json());
 let frase= "frase inicial";
 
 //1.-
-app.get("/api/frase", (req, res) => {
+app.get("/api/palabras", (req, res) => {
     res.send(frase)
 })
 

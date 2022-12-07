@@ -37,17 +37,18 @@ routeExpress.post("", (req, res) => {
 })
 
 routeExpress.put("/:id", (req, res) => {
-let { title, price, thumbnail } = req.body;
-	let producto = productos.find(
+	let { title, price, thumbnail } = req.body;
+	let index = productos.findIndex(
 		producto => producto.id === Number(req.params.id)
 	);
-	if (producto) {
-		productos[producto] = { title, price, thumbnail };
-		productos[producto].id = Number(req.params.id);
-		res.status(200).json(productos[producto])
+	if (index >= 0) {
+		productos[index] = { title, price, thumbnail };
+		productos[index].id = Number(req.params.id);
+		res.json(productos[index]);
 	} else {
-		res.status(404).json({ error: 'Producto no encontrado' });
+		res.status(404).send({ error: 'Producto no encontrado' });
 	}
+
 })
 
 routeExpress.delete("/:id", (req, res) => {
