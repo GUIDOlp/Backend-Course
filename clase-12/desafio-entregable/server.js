@@ -38,6 +38,7 @@ io.on('connection', socket => {
 		fs.writeFileSync('chat/chat.txt', JSON.stringify(messages));
 		io.sockets.emit('messages', messages);
 	});
+
 });
 
 //Ruta para cargar nuestro archivo

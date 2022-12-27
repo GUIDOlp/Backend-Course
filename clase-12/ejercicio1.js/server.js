@@ -38,4 +38,4 @@ const PORT = 8080
 
 const srv = server.listen(PORT, () => console.log(`El servidor websocket esta corriendo en el pureto ${srv.address().port}`))
 
-srv.on("error", erro => console.log(`Error en el servidor ${error}`))
+srv.on("error", error => console.log(`Error en el servidor ${error}`))
