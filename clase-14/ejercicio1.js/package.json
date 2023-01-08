@@ -1,16 +1,17 @@
 {
-  "name": "clase-8",
+  "name": "ejercicio1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack ./archivo1.js ./archivo2.js ./archivo3.js --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "express-handlebars": "^6.0.6"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
